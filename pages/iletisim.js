@@ -12,7 +12,7 @@ export default function Iletisim() {
   const meta = {
     title: pageTitle + " - " + siteTitle,
     description:
-      "İngiltere öğrenci vizesi hakkında sorunlarınız için iletişim formunu doldurunuz.",
+      "Bizimle iletişime geçmek için formunu doldurunuz.",
   };
 
   return (
