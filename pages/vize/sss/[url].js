@@ -1,13 +1,12 @@
 import Breadcrumb from "../../../components/Breadcrumb";
 import Layout from "../../../components/Sablon";
 import Post from "../../../components/Post";
-import SEO from "../../../components/SEO"; 
+import SEO from "../../../components/SEO";
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-export default function Url({ data }) { 
-
+export default function Url({ data }) {
   return (
     <>
       <Layout>

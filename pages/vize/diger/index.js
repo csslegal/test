@@ -9,12 +9,10 @@ const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
 export default function index({ data }) {
-  
   const pageTitle = "Diğer Türleri";
   const meta = {
     title: pageTitle + " - " + siteTitle,
-    description:
-      "diğer türleri hakkında bilgileri bulabilirsiniz.",
+    description: "Diğer türleri hakkında bilgileri bulabilirsiniz.",
   };
 
   return (
@@ -30,9 +28,7 @@ export default function index({ data }) {
 }
 export async function getServerSideProps() {
   try {
-    const res = await fetch(
-      `${siteWebApiUrl}/api/v1/${siteWebApiId}/others`
-    );
+    const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/others`);
     const { data } = await res.json();
 
     return { props: { data } };
