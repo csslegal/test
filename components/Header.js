@@ -13,7 +13,7 @@ export default function Header() {
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            İngitere Vizesi
+            Test Slogan
           </a>
           <button
             className="navbar-toggler collapsed"
