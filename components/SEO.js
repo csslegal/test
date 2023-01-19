@@ -7,16 +7,15 @@ export default function SEO({ meta }) {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
-
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta content={meta.description} name="description" />
-
         {process.env.NEXT_PUBLIC_SITE_INDEX == 1 ? (
           <meta name="robots" content="follow, index" />
         ) : (
           <meta name="robots" content="nofollow, noindex" />
         )}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>{meta.title}</title>
+        <meta content={meta.description} name="description" />
+
         {meta.image ? (
           <link
             rel="preload"
@@ -26,8 +25,7 @@ export default function SEO({ meta }) {
           />
         ) : null}
         <link rel="canonical" href={`${router.asPath}`} />
-       
-       
+
         <link
           rel="apple-touch-icon"
           sizes="72x72"
@@ -81,7 +79,7 @@ export default function SEO({ meta }) {
           sizes="16x16"
           href={`${siteUrl}/images/favicon-16x16.png`}
         />
-        
+
         <link rel="manifest" href={`${siteUrl}/manifest.json`} />
         <meta name="theme-color" content="#fda90d" />
       </Head>
