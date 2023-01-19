@@ -1,0 +1,33 @@
+{
+  "id": "/?utm_source=mobile",
+  "short_name": "ÖV",
+  "name": "İngiltere Öğrenci Vizesi",
+  "start_url": "/?utm_source=mobile",
+  "background_color": "#fda90d",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fda90d",
+  "icons": [
+    {
+      "src": "/images/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/images/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/images/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

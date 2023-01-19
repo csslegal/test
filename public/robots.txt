@@ -1,0 +1,8 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: http://localhost:3000/sss-sitemap.xml 
+Sitemap: http://localhost:3000/diger-sitemap.xml 
