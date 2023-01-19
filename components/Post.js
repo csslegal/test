@@ -26,7 +26,7 @@ export default function Post({ data, table }) {
               <Image
                 src={`${siteUrl}/uploads/${data.image}`}
                 alt={data.title}
-                width={700}
+                width={900}
                 height={500}
                 priority={true}
                 className="my-2 img-fluid rounded mx-auto d-block"
@@ -35,7 +35,7 @@ export default function Post({ data, table }) {
               <Image
                 src={`${siteUrl}/uploads/test.webp`}
                 alt={data.title}
-                width={700}
+                width={900}
                 height={500}
                 className="img-fluid"
               />
