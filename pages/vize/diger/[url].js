@@ -13,14 +13,14 @@ export default function Url({ data }) {
       <Layout>
         <SEO meta={data} />
         <Breadcrumb title={data.title} />
-        <Post data={data} table="question" />
+        <Post data={data} table="other" />
       </Layout>
     </>
   );
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/questions`);
+  const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/others`);
   const { data } = await res.json();
 
   const paths = data.map((post) => ({
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const res = await fetch(
-    `${siteWebApiUrl}/api/v1/question/${context.params.url}`
+    `${siteWebApiUrl}/api/v1/other/${context.params.url}`
   );
   const { data } = await res.json();
   return { props: { data }, revalidate: 1000 };
