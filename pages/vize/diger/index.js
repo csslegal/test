@@ -10,11 +10,11 @@ const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
 export default function index({ data }) {
   
-  const pageTitle = "Diğer İngiltere Vize Türleri";
+  const pageTitle = "Diğer Türleri";
   const meta = {
     title: pageTitle + " - " + siteTitle,
     description:
-      "İngiltere öğrenci vizesi türleri haricinde, diğer İngiltere vize türleri hakkında bilgileri bulabilirsiniz.",
+      "diğer türleri hakkında bilgileri bulabilirsiniz.",
   };
 
   return (
