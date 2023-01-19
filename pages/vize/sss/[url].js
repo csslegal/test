@@ -1,12 +1,13 @@
 import Breadcrumb from "../../../components/Breadcrumb";
 import Layout from "../../../components/Sablon";
 import Post from "../../../components/Post";
-import SEO from "../../../components/SEO";
+import SEO from "../../../components/SEO"; 
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-export default function Url({ data }) {
+export default function Url({ data }) { 
+
   return (
     <>
       <Layout>
@@ -28,12 +29,9 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps(context, req) {
-  const protocol = req.headers["x-forwarded-proto"] || "http";
-  const baseUrl = req ? `${protocol}://${siteWebApiUrl}` : "";
-
+export async function getStaticProps(context) {
   const res = await fetch(
-    `${baseUrl}/api/v1/question/${context.params.url}`
+    `${siteWebApiUrl}/api/v1/question/${context.params.url}`
   );
   const { data } = await res.json();
   return { props: { data }, revalidate: 1000 };
