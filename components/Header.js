@@ -51,7 +51,7 @@ export default function Header() {
                       : "nav-link"
                   }
                 >
-                  Diğer İngiltere Vize Türleri
+                  Diğer Türleri
                 </Link>
               </li>
               <Link

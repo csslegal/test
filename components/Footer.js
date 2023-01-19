@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
           <li className="nav-item">
             <Link href="/vize/diger" className="nav-link text-muted">
-              Diğer İngiltere Vize Türleri
+              Diğer Türleri
             </Link>
           </li>
           <li className="nav-item">
