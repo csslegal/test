@@ -33,7 +33,7 @@ export default function Post({ data, table }) {
               />
             ) : (
               <Image
-                src={`${siteUrl}/uploads/ingiltere-ogrenci-vizesi.webp`}
+                src={`${siteUrl}/uploads/test.webp`}
                 alt={data.title}
                 width={700}
                 height={500}

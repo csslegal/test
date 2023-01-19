@@ -22,7 +22,7 @@ export default function PostList({ data, url }) {
             />
             ):(
               <Image
-              src={`${siteUrl}/uploads/ingiltere-ogrenci-vizesi.webp`}
+              src={`${siteUrl}/uploads/test.webp`}
               alt={post.title}
               width={450}
               height={200}
