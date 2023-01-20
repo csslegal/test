@@ -33,5 +33,5 @@ export async function getStaticProps(context) {
     `${siteWebApiUrl}/api/v1/article/${context.params.url}`
   );
   const { data } = await res.json();
-  return { props: { data }, revalidate: 1000 };
+  return { props: { data }, revalidate: 3600 };
 }
