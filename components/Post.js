@@ -1,9 +1,8 @@
-import Date from "./Date";
-import Image from "next/image";
-import { hasCookie, setCookie, getCookie, deleteCookie } from "cookies-next";
+import Date from "./Date"; 
+import { hasCookie, setCookie} from "cookies-next";
 
-export default function Post({ data, table }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+export default function Post({ data, table }) { 
+  
   const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 
   if (!hasCookie("read_" + table + "_" + data.id)) {
@@ -21,27 +20,10 @@ export default function Post({ data, table }) {
               <span className="fw-bold"> Güncellenme Tarihi: </span>
               <Date dateString={data.updated_at} />
             </div>
-
-            {data.image ? (
-              <Image
-                src={`${siteUrl}/uploads/${data.image}`}
-                alt={data.title}
-                width={900}
-                height={500}
-                priority={true}
-                className="my-2 img-fluid rounded mx-auto d-block"
-              />
-            ) : (
-              <Image
-                src={`${siteUrl}/uploads/test.webp`}
-                alt={data.title}
-                width={900}
-                height={500}
-                className="img-fluid"
-              />
-            )}
+            
             <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
-            <div className=" float-start">
+
+            <div className="float-start">
               <span className="fw-bold">Okunma sayısı: </span>
               {data.hit}
             </div>
