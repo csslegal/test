@@ -4,15 +4,21 @@ import Breadcrumb from "../components/Breadcrumb";
 import Slogan from "../components/Slogan";
 import PostList from "../components/PostList";
 
+const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
+
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
-const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
-const siteDesc = process.env.NEXT_PUBLIC_SITE_DESC;
+
+const description="Desc";
+
+const dbTable="articles";
+const pathUrl="ingiltere-vizesi";
 
 export default function Index({ data }) {
   const meta = {
     title: siteTitle,
-    description: siteDesc,
+    description: description,
+    botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
   };
 
   return (
@@ -20,15 +26,15 @@ export default function Index({ data }) {
       <Layout>
         <SEO meta={meta} />
         <Breadcrumb title={meta.title} />
-        <Slogan title={meta.title} description={meta.description} />
-        <PostList data={data} url="ingiltere-vizesi" />
+        <Slogan title={meta.title} description={description} />
+        <PostList data={data} url={pathUrl} />
       </Layout>
     </>
   );
 }
 export async function getServerSideProps() {
   try {
-    const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/articles`);
+    const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`);
     const { data } = await res.json();
 
     return { props: { data } };

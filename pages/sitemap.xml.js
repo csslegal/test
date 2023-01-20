@@ -1,6 +1,10 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
+
+const dbTable = "articles";
+const pathUrl = "ingiltere-vizesi";
 
 export default function generateSiteMap(data) {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -14,7 +18,7 @@ export default function generateSiteMap(data) {
      ${data
        .map(({ url, created_at }) => {
          return `<url>
-        <loc>${siteUrl}/vize/ingiltere-vizesi/${url}</loc>
+        <loc>${siteUrl}/vize/${pathUrl}/${url}</loc>
         <lastmod>${created_at.substr(0, 10)}</lastmod>
       </url>`;
        })
@@ -31,7 +35,7 @@ export async function getServerSideProps({ res }) {
   try {
     // We make an API call to gather the URLs for our site
     const request = await fetch(
-      siteWebApiUrl + "/api/v1/" + siteWebApiId + "/articles"
+      siteWebApiUrl + "/api/v1/" + siteWebApiId + "/" + dbTable
     );
     const { data } = await request.json();
     const sitemap = generateSiteMap(data);

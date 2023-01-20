@@ -4,16 +4,22 @@ import Breadcrumb from "../../../components/Breadcrumb";
 import Slogan from "../../../components/Slogan";
 import PostList from "../../../components/PostList";
 
-const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
-const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
+const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
+
+const pageTitle = "Sıkça Sorulan Sorular";
+const description = "Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz.";
+
+const dbTable = "questions";
+const pathUrl = "sss";
+
 export default function index({ data }) {
-  const pageTitle = "Sıkça Sorulan Sorular";
   const meta = {
     title: pageTitle + " - " + siteTitle,
-    description:
-      "Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz.",
+    description: description,
+    botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
   };
 
   return (
@@ -21,8 +27,8 @@ export default function index({ data }) {
       <Layout>
         <SEO meta={meta} />
         <Breadcrumb title={pageTitle} />
-        <Slogan title={pageTitle} description={meta.description} />
-        <PostList data={data} url="sss" />
+        <Slogan title={pageTitle} description={description} />
+        <PostList data={data} url={pathUrl} />
       </Layout>
     </>
   );
@@ -30,7 +36,7 @@ export default function index({ data }) {
 export async function getServerSideProps() {
   try {
     const res = await fetch(
-      `${siteWebApiUrl}/api/v1/${siteWebApiId}/questions`
+      `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`
     );
     const { data } = await res.json();
 

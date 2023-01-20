@@ -1,6 +1,5 @@
 import Layout from "../components/Sablon";
 import SEO from "../components/SEO";
-import Slogan from "../components/Slogan";
 import Breadcrumb from "../components/Breadcrumb";
 import Contact from "../components/Contact";
 
@@ -11,8 +10,8 @@ export default function Iletisim() {
 
   const meta = {
     title: pageTitle + " - " + siteTitle,
-    description:
-      "Bizimle iletişime geçmek için formunu doldurunuz.",
+    description: "Bizimle iletişime geçmek için formu doldurunuz.",
+    botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
   };
 
   return (
