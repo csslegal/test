@@ -12,9 +12,9 @@ export default function Header() {
           aria-label="Eleventh navbar example"
         >
           <div className="container-fluid">
-            <a className="navbar-brand" href="/">
+            <span className="navbar-brand">
               Test Slogan
-            </a>
+            </span>
             <button
               className="navbar-toggler collapsed"
               type="button"
