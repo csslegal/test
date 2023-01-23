@@ -6,7 +6,7 @@ export default function Post({ data, table }) {
   const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 
   if (!hasCookie("read_" + table + "_" + data.id)) {
-    setCookie("read_" + table + "_" + data.id, true, { maxAge: 60 * 1 * 1 });
+    setCookie("read_" + table + "_" + data.id, true, { maxAge: 60 * 15 * 1 });
     const res = fetch(`${siteWebApiUrl}/api/v1/count/${table}/${data.id}`);
   }
 
