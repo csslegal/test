@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function SEO({ meta }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  
   const router = useRouter();
   return (
     <>

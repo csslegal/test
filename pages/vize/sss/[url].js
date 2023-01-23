@@ -37,5 +37,5 @@ export async function getStaticProps(context) {
     `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}`
   );
   const { data } = await res.json();
-  return { props: { data } };
+  return { props: { data }, revalidate: 900, };
 }
