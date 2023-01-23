@@ -27,12 +27,12 @@ const NotFoundPage = () => {
               </Link>
             </li>
             <li>
-              <Link target={"_blank"} href="/sss-sitemap.xml">
+              <Link target={"_blank"} href="/diger-sitemap.xml">
                 diger-sitemap.xml
               </Link>
             </li>
             <li>
-              <Link target={"_blank"} href="/diger-sitemap.xml">
+              <Link target={"_blank"} href="/sss-sitemap.xml">
                 sss-sitemap.xml
               </Link>
             </li>

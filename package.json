@@ -19,6 +19,7 @@
     "build": "next build",
     "start": "next start",
     "ok": "next build && next start",
+    "ext": "next build && next export",
     "lint": "next lint"
   },
   "devDependencies": {
