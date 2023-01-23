@@ -32,7 +32,7 @@ export default function Index({ data }) {
     </>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`);
     const { data } = await res.json();
