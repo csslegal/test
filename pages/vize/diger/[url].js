@@ -13,7 +13,6 @@ export default function Url({ data }) {
     <>
       <Layout>
         <SEO meta={data} />
-        <Breadcrumb title={data.title} />
         <Post data={data} table={dbTable} />
       </Layout>
     </>

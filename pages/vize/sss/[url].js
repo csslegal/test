@@ -13,7 +13,6 @@ export default function Url({ data }) {
     <>
       <Layout>
         <SEO meta={data} />
-        <Breadcrumb title={data.title} />
         <Post data={data} table={dbTable} />
       </Layout>
     </>
@@ -37,5 +36,5 @@ export async function getStaticProps(context) {
     `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}`
   );
   const { data } = await res.json();
-  return { props: { data }, revalidate: 900, };
+  return { props: { data }, revalidate: 900 };
 }
