@@ -33,15 +33,15 @@ export default function index({ data }) {
     </>
   );
 }
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const res = await fetch(
       `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`
     );
     const { data } = await res.json();
 
-    return { props: { data } };
+    return { props: { data }, revalidate: 900, };
   } catch (err) {
-    return { props: {} };
+    return { props: {}, revalidate: 900, };
   }
 }
