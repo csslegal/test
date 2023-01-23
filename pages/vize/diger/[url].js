@@ -1,4 +1,3 @@
-import Breadcrumb from "../../../components/Breadcrumb";
 import Layout from "../../../components/Sablon";
 import Post from "../../../components/Post";
 import SEO from "../../../components/SEO";

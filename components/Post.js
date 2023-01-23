@@ -1,4 +1,5 @@
 import Date from "./Date";
+import Breadcrumb from "./Breadcrumb";
 import { hasCookie, setCookie } from "cookies-next";
 
 export default function Post({ data, table }) {
