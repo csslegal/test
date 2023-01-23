@@ -24,7 +24,7 @@ export default function generateSiteMap(data) {
 
 function SiteMap() {}
 
-export async function getStaticProps({ res }) {
+export async function getServerSideProps({ res }) {
   try {
     const request = await fetch(
       siteWebApiUrl + "/api/v1/" + siteWebApiId + "/" + dbTable
@@ -42,5 +42,5 @@ export async function getStaticProps({ res }) {
     res.end();
   }
 
-  return { props: {}, revalidate: 900 };
+  return { props: {} };
 }
