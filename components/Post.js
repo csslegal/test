@@ -16,7 +16,7 @@ export default function Post({ data, table }) {
         <Breadcrumb title={data.title} />
 
         <div className="card border-0">
-          <div className="card-body p-2">
+          <div className="card-body">
             <h1>{data.title}</h1>
             <div>
               <span className="fw-bold"> Güncellenme Tarihi: </span>
