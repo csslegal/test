@@ -9,25 +9,31 @@ export default function PostList({ data, url }) {
   return (
     <>
       {data?.map((post) => (
-        <div className="col-md-6 col-lg-4 col-xl-4" key={post.id}>
+        <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4" key={post.id}>
           <div className="card mb-4">
             {post.image ? (
               <Image
                 src={`${siteUrl}/uploads/${post.image}`}
                 alt={post.title}
-                width={520}
-                height={200}
+                width={540}
+                height={300}
                 priority={true}
-                className="img-fluid"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             ) : (
               <Image
                 src={`${siteUrl}/uploads/test.webp`}
                 alt={post.title}
-                width={450}
-                height={200}                
+                width={540}
+                height={300}
                 priority={true}
-                className="img-fluid"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             )}
 
