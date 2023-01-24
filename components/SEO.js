@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export default function SEO({ meta }) {
-  
   const router = useRouter();
   return (
     <>
@@ -25,7 +26,7 @@ export default function SEO({ meta }) {
             href={`/uploads/${meta.image}`}
           />
         ) : null}
-        <link rel="canonical" href={`${router.asPath}`} />
+        <link rel="canonical" href={`${siteUrl}${router.asPath}`} />
         <link
           rel="apple-touch-icon"
           sizes="72x72"
