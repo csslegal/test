@@ -1,12 +1,12 @@
 {
-  "id": "/?utm_source=mobile",
-  "short_name": "ÖV",
-  "name": "İngiltere Öğrenci Vizesi",
-  "start_url": "/?utm_source=mobile",
-  "background_color": "#fda90d",
+  "background_color": "#ffffff",
+  "description": "Test",
   "display": "standalone",
-  "scope": "/",
-  "theme_color": "#fda90d",
+  "lang": "tr-TR",
+  "name": "Test",
+  "short_name": "Test",
+  "theme_color": "#804D05",
+  "start_url": "/",
   "icons": [
     {
       "src": "/images/favicon-16x16.png",
