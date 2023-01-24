@@ -1,4 +1,5 @@
-export default function Contact({description,title}) {
+export default function Contact({ description, title }) { 
+
   const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
   const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
@@ -46,7 +47,8 @@ export default function Contact({description,title}) {
   return (
     <>
       <h1 className="pb-4">{title}</h1>
-      <p className="fs-4">{description}</p> 
+      <p className="fs-4">{description}</p>
+
       <form onSubmit={handleSubmit}>
         <input type={"hidden"} name="panel_id" value={siteWebApiId} />
         <div className="mb-3">

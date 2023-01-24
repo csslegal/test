@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-export default function Slogan({ title,description }) {
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+export default function Slogan({ title, description }) {
   return (
     <>
       <div className="pb-4 mb-4 bg-light rounded-3">
@@ -8,7 +10,7 @@ export default function Slogan({ title,description }) {
           <h1 className="display-5 fw-bold">{title}</h1>
           <p className="col-md-10 fs-4">{description}</p>
           <Link
-            href="/iletisim"
+            href={`${siteUrl}/iletisim`}
             className="btn btn-primary btn-lg float-start"
             type="button"
           >

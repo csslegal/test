@@ -23,45 +23,45 @@ export default function SEO({ meta }) {
             rel="preload"
             priority="true"
             as="image"
-            href={`/uploads/${meta.image}`}
+            href={`${siteUrl}/uploads/${meta.image}`}
           />
         ) : null}
         <link rel="canonical" href={`${siteUrl}${router.asPath}`} />
         <link
           rel="apple-touch-icon"
           sizes="72x72"
-          href={`/images/apple-icon-72x72.png`}
+          href={`${siteUrl}/images/apple-icon-72x72.png`}
         />
         <link
           rel="apple-touch-icon"
           sizes="114x114"
-          href={`/images/apple-icon-114x114.png`}
+          href={`${siteUrl}/images/apple-icon-114x114.png`}
         />
         <link
           rel="apple-touch-icon"
           sizes="152x152"
-          href={`/images/apple-icon-152x152.png`}
+          href={`${siteUrl}/images/apple-icon-152x152.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="96x96"
-          href={`/images/favicon-96x96.png`}
+          href={`${siteUrl}/images/favicon-96x96.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href={`/images/favicon-32x32.png`}
+          href={`${siteUrl}/images/favicon-32x32.png`}
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href={`/images/favicon-16x16.png`}
+          href={`${siteUrl}/images/favicon-16x16.png`}
         />
 
-        <link rel="manifest" href={`/manifest.json`} />
+        <link rel="manifest" href={`${siteUrl}/manifest.json`} />
         <meta name="theme-color" content="#fda90d" />
       </Head>
     </>

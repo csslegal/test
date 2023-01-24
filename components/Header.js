@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export default function Header() {
   const router = useRouter();
-
   return (
     <>
       <header className="  py-2 mb-4 border-bottom fw-bold">
@@ -12,9 +13,7 @@ export default function Header() {
           aria-label="Eleventh navbar example"
         >
           <div className="container-fluid">
-            <span className="navbar-brand">
-              Test Slogan
-            </span>
+            <span className="navbar-brand">Test Slogan</span>
             <button
               className="navbar-toggler collapsed"
               type="button"
@@ -34,7 +33,7 @@ export default function Header() {
               <ul className="navbar-nav col-lg-12 justify-content-lg-end">
                 <li className="nav-item">
                   <Link
-                    href="/"
+                    href={`${siteUrl}/`}
                     className={
                       router.pathname == "/" ? "active nav-link" : "nav-link"
                     }
@@ -44,7 +43,7 @@ export default function Header() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/vize/diger"
+                    href={`${siteUrl}/vize/diger`}
                     className={
                       router.pathname == "/vize/diger"
                         ? "active nav-link"
@@ -57,7 +56,7 @@ export default function Header() {
 
                 <li className="nav-item">
                   <Link
-                    href="/vize/sss"
+                    href={`${siteUrl}/vize/sss`}
                     className={
                       router.pathname == "/vize/sss"
                         ? "active nav-link"
@@ -69,7 +68,7 @@ export default function Header() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/iletisim"
+                    href={`${siteUrl}/iletisim`}
                     className={
                       router.pathname == "/iletisim"
                         ? "active nav-link"

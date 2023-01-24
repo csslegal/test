@@ -2,9 +2,10 @@ import Date from "./Date";
 import Breadcrumb from "./Breadcrumb";
 import { hasCookie, setCookie } from "cookies-next";
 
-export default function Post({ data, table }) {
-  const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 
+export default function Post({ data, table }) {
   if (!hasCookie("read_" + table + "_" + data.id)) {
     setCookie("read_" + table + "_" + data.id, true, { maxAge: 60 * 15 * 1 });
     const res = fetch(`${siteWebApiUrl}/api/v1/count/${table}/${data.id}`);
