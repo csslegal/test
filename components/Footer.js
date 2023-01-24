@@ -7,7 +7,7 @@ export default function Footer() {
   const year = today.getFullYear();
   return (
     <>
-      <footer className=" border-top mt-2 py-1 my-2">
+      <footer className="border-top mt-2">
         <ul className="nav float-end">
           <li className="nav-item">
             <Link href={`${siteUrl}/`} className="nav-link text-muted">

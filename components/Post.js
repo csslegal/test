@@ -12,44 +12,39 @@ export default function Post({ data, table }) {
   }
   return (
     <div className="row justify-content-center">
-      <div className="col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
+      <div className=" mt-2  col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
         <Breadcrumb title={data.title} />
+        <h1>{data.title}</h1>
+        <div>
+          <span className="fw-bold"> Güncellenme Tarihi: </span>
+          <Date dateString={data.updated_at} />
+        </div>
 
-        <div className="card border-0">
-          <div className="card-body">
-            <h1>{data.title}</h1>
-            <div>
-              <span className="fw-bold"> Güncellenme Tarihi: </span>
-              <Date dateString={data.updated_at} />
-            </div>
+        {data.image ? (
+          <Image
+            className="py-2"
+            src={`/uploads/${data.image}`}
+            alt={data.title}
+            width={960}
+            height={500}
+            priority={true}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+        ) : null}
 
-            {data.image ? (
-              <Image
-                className="py-2"
-                src={`/uploads/${data.image}`}
-                alt={data.title}
-                width={960}
-                height={500}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-            ) : null}
+        <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
 
-            <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
-
-            <div className="row justify-content-between">
-              <div className="col-5 text-start">
-                <span className="fw-bold">Okunma sayısı: </span>
-                {data.hit}
-              </div>
-              <div className="col-7 text-end">
-                <span className="fw-bold"> Eklenme Tarihi: </span>
-                <Date dateString={data.created_at} />
-              </div>
-            </div>
+        <div className="row justify-content-between">
+          <div className="col-5 text-start">
+            <span className="fw-bold">Okunma sayısı: </span>
+            {data.hit}
+          </div>
+          <div className="col-7 text-end">
+            <span className="fw-bold"> Eklenme Tarihi: </span>
+            <Date dateString={data.created_at} />
           </div>
         </div>
       </div>

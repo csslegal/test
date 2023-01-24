@@ -7,7 +7,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <>
-      <header className="  py-2 mb-4 border-bottom fw-bold">
+      <header className="mb-2 border-bottom fw-bold">
         <nav
           className="navbar navbar-expand-lg  rounded"
           aria-label="Eleventh navbar example"

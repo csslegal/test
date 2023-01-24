@@ -9,8 +9,8 @@ export default function PostList({ data, url }) {
   return (
     <>
       {data?.map((post) => (
-        <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4" key={post.id}>
-          <div className="card mb-4">
+        <div className="mt-2 col-sm-6 col-md-6 col-lg-4 col-xl-4" key={post.id}>
+          <div className="card">
             {post.image ? (
               <Image
                 src={`${siteUrl}/uploads/${post.image}`}
