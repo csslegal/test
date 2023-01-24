@@ -12,7 +12,7 @@ export default function Post({ data, table }) {
   }
   return (
     <div className="row justify-content-center">
-      <div className=" mt-2  col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
+      <div className=" mt-2 col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
         <Breadcrumb title={data.title} />
         <h1>{data.title}</h1>
         <div>
