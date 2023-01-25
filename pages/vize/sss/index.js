@@ -7,6 +7,7 @@ import PostList from "../../../components/PostList";
 const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
@@ -36,7 +37,7 @@ export default function index({ data }) {
 export async function getStaticProps() {
   try {
     const res = await fetch(
-      `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`
+      `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}?token=${token}`
     );
     const { data } = await res.json();
 

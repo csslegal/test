@@ -1,6 +1,7 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const dbTable = "others";
@@ -27,7 +28,7 @@ function SiteMap() {}
 export async function getServerSideProps({ res }) {
   try {
     const request = await fetch(
-      siteWebApiUrl + "/api/v1/" + siteWebApiId + "/" + dbTable
+      siteWebApiUrl + "/api/v1/" + siteWebApiId + "/" + dbTable + '?token=' + token
     );
     const { data } = await request.json();
     const sitemap = generateSiteMap(data);

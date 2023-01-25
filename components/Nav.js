@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
 export default function Nav({ categories }) {
   const router = useRouter();
 

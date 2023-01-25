@@ -3,6 +3,7 @@ import Post from "../../../components/Post";
 import SEO from "../../../components/SEO";
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const dbTable = "question";
@@ -20,7 +21,7 @@ export default function Url({ data }) {
 
 export async function getStaticPaths() {
   const res = await fetch(
-    `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}s`
+    `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}s?token=${token}`
   );
   const { data } = await res.json();
 
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const res = await fetch(
-    `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}`
+    `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}?token=${token}`
   );
   const { data } = await res.json();
   return { props: { data }, revalidate: 900 };

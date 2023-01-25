@@ -7,12 +7,13 @@ import PostList from "../components/PostList";
 const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-const description="Desc";
+const description = "Desc";
 
-const dbTable="articles";
-const pathUrl="ingiltere-vizesi";
+const dbTable = "articles";
+const pathUrl = "ingiltere-vizesi";
 
 export default function Index({ data }) {
   const meta = {
@@ -34,11 +35,13 @@ export default function Index({ data }) {
 }
 export async function getStaticProps() {
   try {
-    const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}`);
+    const res = await fetch(
+      `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}?token=${token}`
+    );
     const { data } = await res.json();
 
-    return { props: { data }, revalidate: 900, };
+    return { props: { data }, revalidate: 900 };
   } catch (err) {
-    return { props: {}, revalidate: 900, };
+    return { props: {}, revalidate: 900 };
   }
 }

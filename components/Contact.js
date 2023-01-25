@@ -1,6 +1,6 @@
-export default function Contact({ description, title }) { 
-
+export default function Contact({ description, title }) {
   const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
+  const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
   const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
   const handleSubmit = async (event) => {
@@ -25,7 +25,7 @@ export default function Contact({ description, title }) {
         content: event.target.content.value,
       };
       const JSONdata = JSON.stringify(datas);
-      const endpoint = siteWebApiUrl + "/api/v1/contact";
+      const endpoint = siteWebApiUrl + "/api/v1/contact?token=" + token;
       const options = {
         method: "POST",
         headers: {
