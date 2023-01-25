@@ -28,7 +28,7 @@ export async function getStaticPaths() {
   const paths = data.map((post) => ({
     params: { url: post.url },
   }));
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps(context) {
