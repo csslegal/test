@@ -1,4 +1,5 @@
 const path = require("path");
+const { DeleteSourceMapsPlugin } = require("webpack-delete-sourcemaps-plugin");
 
 module.exports = {
   sassOptions: {
@@ -9,5 +10,6 @@ module.exports = {
     unoptimized: true,
   },
   productionBrowserSourceMaps: true,
-  
+  devtool: "hidden-source-map",
+  plugins: [new DeleteSourceMapsPlugin()],
 };
