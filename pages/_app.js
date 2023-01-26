@@ -1,9 +1,11 @@
 import "../styles/custom.css";
 import "../styles/variables.scss";
+
 import { useEffect } from "react";
-import Script from "next/script";
 import { useRouter } from "next/router";
-import * as gtag from "../components/gtag";
+
+import Script from "next/script";
+import * as gtag from "../components/Gtag";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -23,7 +25,6 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
