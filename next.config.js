@@ -10,6 +10,10 @@ module.exports = {
     unoptimized: true,
   },
   productionBrowserSourceMaps: true,
-  devtool: "hidden-source-map",
-  plugins: [new DeleteSourceMapsPlugin()],
+  webpack: (config, { isServer }) => {
+    config.plugins.push(
+      new DeleteSourceMapsPlugin({ isServer, keepServerSourcemaps: true })
+    );
+    return config;
+  },
 };
