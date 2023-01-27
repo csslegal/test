@@ -59,6 +59,7 @@ export default function Contact({ description, title }) {
             type="text"
             id="name"
             name="name"
+            autoComplete="off"
             required
             className="form-control"
             placeholder="Adınız"
@@ -72,6 +73,7 @@ export default function Contact({ description, title }) {
             type="text"
             id="phone"
             name="phone"
+            autoComplete="off"
             required
             className="form-control"
             placeholder="555 555 55 55"
@@ -85,6 +87,7 @@ export default function Contact({ description, title }) {
             type="email"
             id="email"
             name="email"
+            autoComplete="off"
             required
             className="form-control"
             placeholder="ornek@ornek.com"
@@ -98,6 +101,7 @@ export default function Contact({ description, title }) {
             type="text"
             id="subject"
             name="subject"
+            autoComplete="off"
             required
             className="form-control"
             placeholder="Konu"
@@ -110,6 +114,8 @@ export default function Contact({ description, title }) {
           <textarea
             id="content"
             name="content"
+            placeholder="Mesajınız"
+            autoComplete="off"
             required
             className="form-control"
             rows="3"
