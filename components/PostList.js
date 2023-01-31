@@ -1,15 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import Date from "./Date";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
 export default function PostList({ data, url }) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   return (
     <>
-      {data?.map((post) => (
-        <div className="mt-2 col-sm-6 col-md-6 col-lg-4 col-xl-4" key={post.id}>
+      {data?.map((post, index) => (
+        <div className="mt-2 col-sm-6 col-md-6 col-lg-4 col-xl-4" key={index}>
           <div className="card">
             {post.image ? (
               <Image

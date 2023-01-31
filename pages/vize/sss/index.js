@@ -11,7 +11,8 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
-const description = "Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz.";
+const description =
+  "Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz.";
 
 const dbTable = "questions";
 const pathUrl = "sss";
@@ -41,8 +42,8 @@ export async function getStaticProps() {
     );
     const { data } = await res.json();
 
-    return { props: { data }, revalidate: 900, };
+    return { props: { data }, revalidate: 900 };
   } catch (err) {
-    return { props: {}, revalidate: 900, };
+    return { props: {}, revalidate: 900 };
   }
 }

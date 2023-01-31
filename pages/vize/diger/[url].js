@@ -30,7 +30,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}?token=${token}`);
+  const res = await fetch(
+    `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}?token=${token}`
+  );
   const { data } = await res.json();
 
   if (data == "") return { notFound: true };

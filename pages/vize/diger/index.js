@@ -41,8 +41,8 @@ export async function getStaticProps() {
     );
     const { data } = await res.json();
 
-    return { props: { data }, revalidate: 900, };
+    return { props: { data }, revalidate: 900 };
   } catch (err) {
-    return { props: {}, revalidate: 900, };
+    return { props: {}, revalidate: 900 };
   }
 }

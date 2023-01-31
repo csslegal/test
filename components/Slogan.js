@@ -1,8 +1,7 @@
 import Link from "next/link";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
 export default function Slogan({ title, description }) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   return (
     <>
       <div className="pb-4 mb-2 bg-light rounded-3">

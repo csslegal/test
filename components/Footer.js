@@ -1,8 +1,7 @@
 import Link from "next/link";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
 export default function Footer() {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
   const today = new Date();
   const year = today.getFullYear();
   return (

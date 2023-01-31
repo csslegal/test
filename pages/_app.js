@@ -12,10 +12,10 @@ export default function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
-
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
+
     router.events.on("routeChangeComplete", handleRouteChange);
     router.events.on("hashChangeComplete", handleRouteChange);
     return () => {

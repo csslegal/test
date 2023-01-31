@@ -29,7 +29,13 @@ function SiteMap() {}
 export async function getServerSideProps({ res }) {
   try {
     const request = await fetch(
-      siteWebApiUrl + "/api/v1/" + siteWebApiId + "/" + dbTable + '?token=' + token
+      siteWebApiUrl +
+        "/api/v1/" +
+        siteWebApiId +
+        "/" +
+        dbTable +
+        "?token=" +
+        token
     );
     const { data } = await request.json();
     const sitemap = generateSiteMap(data);
