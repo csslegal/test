@@ -20,21 +20,18 @@ export default function Url({ data }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    `${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}s?token=${token}`
-  );
+  const res = await fetch(`${siteWebApiUrl}/api/v1/${siteWebApiId}/${dbTable}s?token=${token}`);
   const { data } = await res.json();
+  const paths = data.map((post) => ({ params: { url: post.url } }));
 
-  const paths = data.map((post) => ({
-    params: { url: post.url },
-  }));
-  return { paths, fallback: "blocking"  };
+  return { paths, fallback: "blocking" };
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(
-    `${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}?token=${token}`
-  );
+  const res = await fetch(`${siteWebApiUrl}/api/v1/${dbTable}/${context.params.url}?token=${token}`);
   const { data } = await res.json();
+
+  if (data == "") return { notFound: true };
+
   return { props: { data }, revalidate: 900 };
 }
