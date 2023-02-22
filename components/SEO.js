@@ -27,13 +27,13 @@ export default function SEO({ meta }) {
 
         <meta property="og:title" content={`${meta.title}`} />
         <meta property="og:description" content={`${meta.description}`} />
-        <meta property="og:image" content={`${meta.image}`} />
+        {meta.image ? (<meta property="og:image" content={`${meta.image}`} />) : null}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${meta.title}`} />
         <meta name="twitter:description" content={`${meta.description}`} />
-        <meta name="twitter:image" content={`${meta.image}`} />
-        
+        {meta.image ? ( <meta name="twitter:image" content={`${meta.image}`} />) : null}
+
         <link
           rel="apple-touch-icon"
           sizes="72x72"
