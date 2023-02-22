@@ -15,6 +15,7 @@ export default function SEO({ meta }) {
         <link rel="shortcut icon" href="/favicon.ico" />
 
         <title>{meta.title}</title>
+        
         <meta name="description" content={meta.description} />
 
         {meta.image ? (
@@ -22,7 +23,7 @@ export default function SEO({ meta }) {
             rel="preload"
             priority="true"
             as="image"
-            href={`${siteUrl}/uploads/${meta.image}`}
+            href={`${meta.image}`}
           />
         ) : null}
         <link rel="canonical" href={`${siteUrl}${router.asPath}`} />
