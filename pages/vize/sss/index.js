@@ -11,8 +11,7 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
-const description =
-  "Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz.";
+const description ="Ne Yapmalıyım? gibi soruları ve cevaplarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz";
 
 const dbTable = "questions";
 const pathUrl = "sss";

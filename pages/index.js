@@ -10,7 +10,7 @@ const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-const description = "Desc";
+const description = "Burada site sloganı ve meta etiketi için gerekli özet bilgisi yer alacaktır. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz";
 
 const dbTable = "articles";
 const pathUrl = "ingiltere-vizesi";

@@ -11,7 +11,7 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Diğer Türler";
-const description = "Diğer türler hakkında bilgileri bulabilirsiniz.";
+const description = "Burada diğer türler hakkında bilgileri bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "others";
 const pathUrl = "diger";
