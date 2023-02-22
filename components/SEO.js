@@ -13,11 +13,8 @@ export default function SEO({ meta }) {
           <meta name="robots" content="nofollow, noindex" />
         )}
         <link rel="shortcut icon" href="/favicon.ico" />
-
         <title>{meta.title}</title>
-        
         <meta name="description" content={meta.description} />
-
         {meta.image ? (
           <link
             rel="preload"
@@ -27,6 +24,16 @@ export default function SEO({ meta }) {
           />
         ) : null}
         <link rel="canonical" href={`${siteUrl}${router.asPath}`} />
+
+        <meta property="og:title" content={`${meta.title}`} />
+        <meta property="og:description" content={`${meta.description}`} />
+        <meta property="og:image" content={`${meta.image}`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${meta.title}`} />
+        <meta name="twitter:description" content={`${meta.description}`} />
+        <meta name="twitter:image" content={`${meta.image}`} />
+        
         <link
           rel="apple-touch-icon"
           sizes="72x72"
