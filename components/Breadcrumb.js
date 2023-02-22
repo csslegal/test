@@ -8,7 +8,7 @@ export default function Breadcrumb({ title }) {
       <nav aria-label="breadcrumb" className="mt-2">
         <ol className="breadcrumb ">
           <li className="breadcrumb-item">
-            <Link href={`${siteUrl}/`}>Anasayfa</Link>
+            <Link title="Anasayfa" href={`${siteUrl}/`}>Anasayfa</Link>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
             {title}

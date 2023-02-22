@@ -18,6 +18,7 @@ export default function Nav({ categories }) {
               }
             >
               <Link
+                title={`${category.name}`}
                 href={`${category.slug}`}
                 className={
                   router.asPath == category.slug

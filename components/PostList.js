@@ -36,7 +36,10 @@ export default function PostList({ data, url }) {
             )}
 
             <div className="card-body">
-              <Link href={`${siteUrl}/vize/${url}/${post.url}`}>
+              <Link
+                title={`${post.title}`} 
+                href={`${siteUrl}/vize/${url}/${post.url}`}
+              >
                 <h2>{post.title}</h2>
               </Link>
               <p className="card-text">

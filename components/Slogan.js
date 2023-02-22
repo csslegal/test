@@ -9,6 +9,7 @@ export default function Slogan({ title, description }) {
           <h1 className="display-5 fw-bold">{title}</h1>
           <p className="col-md-10 fs-4">{description}</p>
           <Link
+            title="İletişim"
             href={`${siteUrl}/iletisim`}
             className="btn btn-primary btn-lg float-start"
             type="button"

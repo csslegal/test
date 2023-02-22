@@ -33,6 +33,7 @@ export default function Header() {
               <ul className="navbar-nav col-lg-12 justify-content-lg-end">
                 <li className="nav-item">
                   <Link
+                    title="Anasayfa"
                     href={`${siteUrl}/`}
                     className={
                       router.pathname == "/" ? "active nav-link" : "nav-link"
@@ -43,6 +44,7 @@ export default function Header() {
                 </li>
                 <li className="nav-item">
                   <Link
+                    title="Diğer Vize Türleri"
                     href={`${siteUrl}/vize/diger`}
                     className={
                       router.pathname == "/vize/diger"
@@ -56,6 +58,7 @@ export default function Header() {
 
                 <li className="nav-item">
                   <Link
+                    title="Sıkça Sorulan Sorular"
                     href={`${siteUrl}/vize/sss`}
                     className={
                       router.pathname == "/vize/sss"
@@ -68,6 +71,7 @@ export default function Header() {
                 </li>
                 <li className="nav-item">
                   <Link
+                    title="İletişim"
                     href={`${siteUrl}/iletisim`}
                     className={
                       router.pathname == "/iletisim"
