@@ -23,7 +23,7 @@ export default function PostList({ data, url }) {
               />
             ) : (
               <Image
-                src={`${siteUrl}/uploads/test.webp`}
+                src={`${siteUrl}/images/test.webp`}
                 alt={post.title}
                 width={540}
                 height={300}
