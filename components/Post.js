@@ -27,7 +27,7 @@ export default function Post({ data, table }) {
         {data.image ? (
           <Image
             className="py-2"
-            src={`/uploads/${data.image}`}
+            src={`${data.image}`}
             alt={data.title}
             width={960}
             height={500}
