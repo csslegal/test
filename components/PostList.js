@@ -11,7 +11,7 @@ export default function PostList({ data, url }) {
           <div className="card">
             {post.image ? (
               <Image
-                src={`${siteUrl}/uploads/${post.image}`}
+                src={`${post.image}`}
                 alt={post.title}
                 width={540}
                 height={300}
