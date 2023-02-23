@@ -25,6 +25,7 @@ export default function Post({ data, table }) {
         </div>
 
         {data.image ? (
+          <div className="card">
           <Image
             className="py-2"
             src={`${data.image}`}
@@ -37,6 +38,7 @@ export default function Post({ data, table }) {
               height: "auto",
             }}
           />
+          </div>
         ) : null}
 
         <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
