@@ -24,18 +24,22 @@ export default function Post({ data, table }) {
         </div>
 
         {data.image ? (
-          <Image
-            className="py-2"
-            src={`${data.image}`}
-            alt={data.title}
-            width={960}
-            height={500}
-            priority={true}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-            }}
-          />
+          <div className="row justify-content-center">
+            <div className="col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
+              <Image
+                className="py-2"
+                src={`${data.image}`}
+                alt={data.title}
+                width={960}
+                height={500}
+                priority={true}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
+          </div>
         ) : null}
 
         <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
