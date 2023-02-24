@@ -1,6 +1,7 @@
 import Layout from "../../../components/Sablon";
 import Post from "../../../components/Post";
 import SEO from "../../../components/SEO";
+import Breadcrumb from "../../../components/Breadcrumb";
 
 const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
@@ -13,6 +14,7 @@ export default function Url({ data }) {
     <>
       <Layout>
         <SEO meta={data} />
+        <Breadcrumb title={data.title} />
         <Post data={data} table={dbTable} />
       </Layout>
     </>

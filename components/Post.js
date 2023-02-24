@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { hasCookie, setCookie } from "cookies-next";
-import Breadcrumb from "./Breadcrumb";
 import Date from "./Date";
 
 export default function Post({ data, table }) {
@@ -15,8 +14,6 @@ export default function Post({ data, table }) {
   }
   return (
       <div className="mt-2 col-12">
-        <Breadcrumb title={data.title} />
-
         <h1>{data.title}</h1>
         <div>
           <span className="fw-bold"> Güncellenme Tarihi: </span>
