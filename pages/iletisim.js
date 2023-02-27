@@ -10,7 +10,7 @@ export default function Iletisim() {
 
   const meta = {
     title: pageTitle + " - " + siteTitle,
-    description: "Bizimle iletişime geçmek için formu doldurunuz.",
+    description: "İngiltere öğrenci vizesi başvurusu veya vize işlemleriyle ilgili herhangi bir sorunuz varsa, aşağıdaki iletişim formu ile bizlere ulaşabilirsiniz.",
     botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
   };
 
