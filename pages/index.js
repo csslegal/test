@@ -11,7 +11,7 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const description =
-  "İngiltere öğrenci vizesi, İngiltere'de eğitim almak isteyen uluslararası öğrencilerin başvurabileceği bir vize türüdür. İngiltere'de bir eğitim kurumuna kaydolmak için öğrenci vizesi almak gerekmektedir. İngiltere öğrenci vizesi başvurusu yapmadan önce, başvuru yapmak istediğiniz eğitim kurumuna kayıt olmanız ve kabul edilmeniz gerekmektedir. Ayrıca, vize başvurusunda göstermeniz gereken belli bir miktarda finansal kaynağınız olmalıdır. Öğrenci vizesi başvurusu genellikle İngiltere'nin resmi vize başvuru merkezleri veya online olarak yapılmaktadır. Başvurunun incelenmesi ve sonucun açıklanması süreci genellikle birkaç hafta sürmektedir.";
+  "İngiltere öğrenci vizesi, İngiltere'de eğitim almak isteyen uluslararası öğrencilerin başvurabileceği bir vize türüdür. İngiltere'de bir eğitim kurumuna kaydolmak için öğrenci vizesi almak gerekmektedir. İngiltere öğrenci vizesi başvurusu yapmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "articles";
 const pathUrl = "ingiltere-vizesi";

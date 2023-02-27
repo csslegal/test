@@ -11,7 +11,7 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
-const description ="İngiltere öğrenci vizesi hakkında sıkça sorulan sorular ve yanıtları bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
+const description ="İngiltere öğrenci vizesi hakkında sıkça sorulan sorular ve yanıtlarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "questions";
 const pathUrl = "sss";

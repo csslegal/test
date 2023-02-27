@@ -11,7 +11,7 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Diğer Türler";
-const description = "İngiltere'de yaşamak, İngiltere'de çalışmak veya İngiltere'yi ziyaret etmek isteyen kişilerin farklı vize türleri mevcuttur.Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
+const description = "İngiltere'de yaşamak, İngiltere'de çalışmak veya İngiltere'yi ziyaret etmek isteyen kişilerin farklı vize türleri mevcuttur. Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "others";
 const pathUrl = "diger";
