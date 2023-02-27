@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteTitle = process.env.NEXT_PUBLIC_SITE_TITLE;
 
 export default function Header() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function Header() {
           aria-label="Eleventh navbar example"
         >
           <div className="container-fluid">
-            <span className="navbar-brand">Test Slogan</span>
+            <span className="navbar-brand">{siteTitle}</span>
             <button
               className="navbar-toggler collapsed"
               type="button"
