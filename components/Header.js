@@ -53,7 +53,7 @@ export default function Header() {
                         : "nav-link"
                     }
                   >
-                    Diğer Türleri
+                    Diğer Vize Türleri
                   </Link>
                 </li>
 

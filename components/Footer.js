@@ -32,7 +32,7 @@ export default function Footer() {
               href={`${siteUrl}/vize/diger`}
               className="nav-link text-muted"
             >
-              Diğer Türleri
+              Diğer Vize Türleri
             </Link>
           </li>
           <li className="nav-item">
