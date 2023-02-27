@@ -27,7 +27,7 @@ export default function Index({ data }) {
     <>
       <Layout>
         <SEO meta={meta} />
-        <Breadcrumb title={meta.title} />
+        <Breadcrumb title="" />
         <Slogan title={meta.title} description={description} />
         <PostList data={data} url={pathUrl} />
       </Layout>
