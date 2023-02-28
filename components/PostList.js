@@ -21,23 +21,11 @@ export default function PostList({ data, url }) {
                   height: "auto",
                 }}
               />
-            ) : (
-              <Image
-                src={`${siteUrl}/images/test.webp`}
-                alt={post.title}
-                width={540}
-                height={300}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-            )}
+            ) : null}
 
             <div className="card-body">
               <Link
-                title={`${post.title}`} 
+                title={`${post.title}`}
                 href={`${siteUrl}/vize/${url}/${post.url}`}
               >
                 <h2>{post.title}</h2>

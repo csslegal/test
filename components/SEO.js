@@ -69,7 +69,7 @@ export default function SEO({ meta }) {
         />
 
         <link rel="manifest" href={`${siteUrl}/manifest.json`} />
-        <meta name="theme-color" content="#fda90d" />
+        <meta name="theme-color" content="#804D05" />
       </Head>
     </>
   );

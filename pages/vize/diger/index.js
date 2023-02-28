@@ -10,8 +10,8 @@ const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-const pageTitle = "Diğer Vize Türleri";
-const description = "İngiltere'de yaşamak, İngiltere'de çalışmak veya İngiltere'yi ziyaret etmek isteyen kişilerin farklı vize türleri mevcuttur. Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
+const pageTitle = "Diğer Test Türleri";
+const description = "İngiltere'de test, İngiltere'de test2 veya İngiltere'yi test3 etmek isteyen kişilerin farklı vize türleri mevcuttur. Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "others";
 const pathUrl = "diger";
