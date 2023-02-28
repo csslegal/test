@@ -11,7 +11,8 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Diğer Test Türleri";
-const description = "İngiltere'de test, İngiltere'de test2 veya İngiltere'yi test3 etmek isteyen kişilerin farklı vize türleri mevcuttur. Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
+const description =
+  "İngiltere'de test, İngiltere'de test2 veya İngiltere'yi test3 etmek isteyen kişilerin farklı vize türleri mevcuttur. Bu vize türlerinin her biri farklı başvuru süreçlerine ve şartlara tabidir. Vize başvurusunda bulunmadan önce, başvuru yapmak istediğiniz vize türü hakkında ayrıntılı bilgi edinmek için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "others";
 const pathUrl = "diger";
@@ -21,13 +22,14 @@ export default function index({ data }) {
     title: pageTitle + " - " + siteTitle,
     description: description,
     botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
+    subPage: { active: false, url: "", title: "" },
   };
 
   return (
     <>
       <Layout>
         <SEO meta={meta} />
-        <Breadcrumb title={pageTitle} />
+        <Breadcrumb title={pageTitle} subPage={meta.subPage} />
         <Slogan title={pageTitle} description={description} />
         <PostList data={data} url={pathUrl} />
       </Layout>

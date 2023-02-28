@@ -9,12 +9,18 @@ const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const dbTable = "question";
 
+const subPage = {
+  active: true,
+  url: "vize/sss",
+  title: "Sıkça Sorulan Sorular",
+};
+
 export default function Url({ data }) {
   return (
     <>
       <Layout>
         <SEO meta={data} />
-        <Breadcrumb title={data.title} />
+        <Breadcrumb title={data.title} subPage={subPage} />
         <Post data={data} table={dbTable} />
       </Layout>
     </>

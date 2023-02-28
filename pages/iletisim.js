@@ -10,15 +10,17 @@ export default function Iletisim() {
 
   const meta = {
     title: pageTitle + " - " + siteTitle,
-    description: "İngiltere test vizesi başvurusu veya vize işlemleriyle ilgili herhangi bir sorunuz varsa, aşağıdaki iletişim formu ile bizlere ulaşabilirsiniz.",
+    description:
+      "İngiltere test vizesi başvurusu veya vize işlemleriyle ilgili herhangi bir sorunuz varsa, aşağıdaki iletişim formu ile bizlere ulaşabilirsiniz.",
     botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
+    subPage: { active: false, url: "", title: "" },
   };
 
   return (
     <>
       <Layout>
         <SEO meta={meta} />
-        <Breadcrumb title={pageTitle} />
+        <Breadcrumb title={pageTitle} subPage={meta.subPage} />
         <Contact title={pageTitle} description={meta.description} />
       </Layout>
     </>

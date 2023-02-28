@@ -10,8 +10,7 @@ const siteWebApiUrl = process.env.NEXT_PUBLIC_WEB_API_URL;
 const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
-const description =
-  "Test.";
+const description = "Test.";
 
 const dbTable = "articles";
 const pathUrl = "ingiltere-vizesi";
@@ -21,13 +20,14 @@ export default function Index({ data }) {
     title: siteTitle,
     description: description,
     botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
+    subPage: { active: false, url: "", title: "" },
   };
 
   return (
     <>
       <Layout>
         <SEO meta={meta} />
-        <Breadcrumb title="" />
+        <Breadcrumb title="" subPage={meta.subPage} />
         <Slogan title={meta.title} description={description} />
         <PostList data={data} url={pathUrl} />
       </Layout>

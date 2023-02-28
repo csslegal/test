@@ -11,7 +11,8 @@ const token = process.env.NEXT_PUBLIC_WEB_API_TOKEN;
 const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
-const description ="İngiltere test vizesi hakkında sıkça sorulan sorular ve yanıtlarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
+const description =
+  "İngiltere test vizesi hakkında sıkça sorulan sorular ve yanıtlarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "questions";
 const pathUrl = "sss";
@@ -21,13 +22,14 @@ export default function index({ data }) {
     title: pageTitle + " - " + siteTitle,
     description: description,
     botIndex: process.env.NEXT_PUBLIC_SITE_INDEX,
+    subPage: { active: false, url: "", title: "" },
   };
 
   return (
     <>
       <Layout>
         <SEO meta={meta} />
-        <Breadcrumb title={pageTitle} />
+        <Breadcrumb title={pageTitle} subPage={meta.subPage} />
         <Slogan title={pageTitle} description={description} />
         <PostList data={data} url={pathUrl} />
       </Layout>
