@@ -12,7 +12,7 @@ const dbTable = "other";
 const subPage = {
   active: true,
   url: "vize/diger",
-  title: "Diğer Vize Türleri",
+  title: "Diğer Test Türleri",
 };
 
 export default function Url({ data }) {
