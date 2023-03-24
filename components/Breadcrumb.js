@@ -28,9 +28,12 @@ export default function Breadcrumb({ title, subPage }) {
               </Link>
             </li>
           ) : null}
-          <li className="breadcrumb-item active" aria-current="page">
-            {title}
-          </li>
+
+          {title == "" ? null : (
+            <li className="breadcrumb-item active" aria-current="page">
+              {title}
+            </li>
+          )}
         </ol>
       </nav>
     </>

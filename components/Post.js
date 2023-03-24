@@ -13,44 +13,40 @@ export default function Post({ data, table }) {
     );
   }
   return (
-      <div className="mt-2 col-12">
-        <h1>{data.title}</h1>
-        <div>
+    <div className="mt-2 col-12">
+      <h1>{data.title}</h1>
+
+      <div className="row justify-content-between">
+        <div className="col-5 text-start">
+          <span className="fw-bold">Okunma sayısı: </span>
+          {data.hit}
+        </div>
+        <div className="col-7 text-end">
           <span className="fw-bold"> Güncellenme Tarihi: </span>
           <Date dateString={data.updated_at} />
         </div>
-
-        {data.image ? (
-          <div className="row justify-content-center">
-            <div className="col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
-              <Image
-                className="py-2"
-                src={`${data.image}`}
-                alt={data.title}
-                width={960}
-                height={500}
-                priority={true}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-            </div>
-          </div>
-        ) : null}
-
-        <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
-
-        <div className="row justify-content-between">
-          <div className="col-5 text-start">
-            <span className="fw-bold">Okunma sayısı: </span>
-            {data.hit}
-          </div>
-          <div className="col-7 text-end">
-            <span className="fw-bold"> Eklenme Tarihi: </span>
-            <Date dateString={data.created_at} />
-          </div>
       </div>
+
+      {data.image ? (
+        <div className="row justify-content-center">
+          <div className="col-sm-12 col-md-12 col-lg-10 col-xl-9 col-xxl-8">
+            <Image
+              className="py-2"
+              src={`${data.image}`}
+              alt={data.title}
+              width={960}
+              height={500}
+              priority={true}
+              loading="lazy"
+              style={{ 
+                maxWidth: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
+        </div>
+      ) : null}
+      <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
     </div>
   );
 }

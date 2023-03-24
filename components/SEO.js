@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import YandexMetrika from "./YandexMetrika";
 
 export default function SEO({ meta }) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -24,36 +25,28 @@ export default function SEO({ meta }) {
           />
         ) : null}
         <link rel="canonical" href={`${siteUrl}${router.asPath}`} />
-
         <meta property="og:title" content={`${meta.title}`} />
         <meta property="og:description" content={`${meta.description}`} />
-        {meta.image ? (<meta property="og:image" content={`${meta.image}`} />) : null}
-
+        {meta.image ? (
+          <meta property="og:image" content={`${meta.image}`} />
+        ) : null}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${meta.title}`} />
         <meta name="twitter:description" content={`${meta.description}`} />
-        {meta.image ? ( <meta name="twitter:image" content={`${meta.image}`} />) : null}
-
+        {meta.image ? (
+          <meta name="twitter:image" content={`${meta.image}`} />
+        ) : null}
         <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href={`${siteUrl}/images/apple-icon-72x72.png`}
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href={`${siteUrl}/images/apple-icon-114x114.png`}
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href={`${siteUrl}/images/apple-icon-152x152.png`}
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href={`${siteUrl}/images/android-chrome-512x512.png`}
         />
         <link
           rel="icon"
           type="image/png"
-          sizes="96x96"
-          href={`${siteUrl}/images/favicon-96x96.png`}
+          sizes="192x192"
+          href={`${siteUrl}/images/android-chrome-192x192.png`}
         />
         <link
           rel="icon"
@@ -67,9 +60,15 @@ export default function SEO({ meta }) {
           sizes="16x16"
           href={`${siteUrl}/images/favicon-16x16.png`}
         />
-
         <link rel="manifest" href={`${siteUrl}/manifest.json`} />
-        <meta name="theme-color" content="#804D05" />
+        <meta name="theme-color" content="#1f2d43" />
+        <YandexMetrika
+          yid={0}
+          clickmap={true}
+          trackLinks={true}
+          accurateTrackBounce={true}
+          webvisor={false}
+        />
       </Head>
     </>
   );

@@ -9,21 +9,12 @@ export default function Footer() {
       <footer className="border-top mt-4">
         <ul className="nav float-end">
           <li className="nav-item">
-            <Link 
-              title="Anasayfa" 
-              href={`${siteUrl}/`} 
+            <Link
+              title="Anasayfa"
+              href={`${siteUrl}/`}
               className="nav-link text-muted"
             >
               Anasayfa
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link 
-              title="Sıkça Sorulan Sorular" 
-              href={`${siteUrl}/vize/sss`} 
-              className="nav-link text-muted"
-            >
-              S.S.S
             </Link>
           </li>
           <li className="nav-item">
@@ -36,9 +27,19 @@ export default function Footer() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link 
+            <Link
+              title="Sıkça Sorulan Sorular"
+              href={`${siteUrl}/vize/sss`}
+              className="nav-link text-muted"
+            >
+              S.S.S
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            <Link
               title="İletişim"
-              href={`${siteUrl}/iletisim`} 
+              href={`${siteUrl}/iletisim`}
               className="nav-link text-muted"
             >
               İletişim

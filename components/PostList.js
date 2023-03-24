@@ -16,6 +16,7 @@ export default function PostList({ data, url }) {
                 width={540}
                 height={300}
                 priority={true}
+                loading="lazy"
                 style={{
                   maxWidth: "100%",
                   height: "auto",
@@ -32,7 +33,7 @@ export default function PostList({ data, url }) {
               </Link>
               <p className="card-text">
                 <small className="text-muted">
-                  Son güncelleme: <Date dateString={post.created_at} />
+                  Son güncelleme: <Date dateString={post.updated_at} />
                 </small>
               </p>
             </div>

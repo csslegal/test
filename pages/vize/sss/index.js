@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Layout from "../../../components/Sablon";
 import SEO from "../../../components/SEO";
 import Breadcrumb from "../../../components/Breadcrumb";
@@ -12,7 +13,7 @@ const siteWebApiId = process.env.NEXT_PUBLIC_WEB_API_ID;
 
 const pageTitle = "Sıkça Sorulan Sorular";
 const description =
-  "İngiltere test vizesi hakkında sıkça sorulan sorular ve yanıtlarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
+  "İngiltere öğrenci vizesi hakkında sıkça sorulan sorular ve yanıtlarını bulabilirsiniz. Daha fazla bilgi için iletişim kısmından bizlere ulaşabilirsiniz.";
 
 const dbTable = "questions";
 const pathUrl = "sss";
@@ -25,13 +26,47 @@ export default function index({ data }) {
     subPage: { active: false, url: "", title: "" },
   };
 
+  const [page, setPage] = useState(1);
+  const postsPerPage = 6;
+
+  const indexOfLastPost = page * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
+
+  const totalPages = Math.ceil(data.length / postsPerPage);
+
+  const nextPage = () => {
+    if (page < totalPages) setPage(page + 1);
+  }; 
+
+  const prevPage = () => {
+    if (page > 1) setPage(page - 1);
+  };
+
   return (
     <>
       <Layout>
         <SEO meta={meta} />
         <Breadcrumb title={pageTitle} subPage={meta.subPage} />
         <Slogan title={pageTitle} description={description} />
-        <PostList data={data} url={pathUrl} />
+        <PostList data={currentPosts} url={pathUrl} />
+
+        <div className=" mt-4 btn-group" role="group" aria-label="">
+          <button
+            type="button"
+            className="btn btn-lg btn-outline-primary"
+            onClick={prevPage}
+          >
+            Önceki Sayfa
+          </button>
+          <button
+            type="button"
+            className="btn btn-lg btn-outline-primary"
+            onClick={nextPage}
+          >
+            Sonraki Sayfa
+          </button>
+        </div>
       </Layout>
     </>
   );

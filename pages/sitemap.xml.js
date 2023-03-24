@@ -13,10 +13,10 @@ export default function generateSiteMap(data) {
      <url><loc>${siteUrl}</loc></url>
      <url><loc>${siteUrl}/iletisim</loc></url>
      ${data
-       .map(({ url, created_at }) => {
+       .map(({ url, updated_at }) => {
          return `<url>
         <loc>${siteUrl}/vize/${pathUrl}/${url}</loc>
-        <lastmod>${created_at.substr(0, 10)}</lastmod>
+        <lastmod>${updated_at.substr(0, 10)}</lastmod>
       </url>`;
        })
        .join("")}
