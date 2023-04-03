@@ -18,7 +18,7 @@ const description =
 const dbTable = "questions";
 const pathUrl = "sss";
 
-export default function index({ data }) {
+export default function Index({ data }) {
   const meta = {
     title: pageTitle + " - " + siteTitle,
     description: description,
@@ -37,7 +37,7 @@ export default function index({ data }) {
 
   const nextPage = () => {
     if (page < totalPages) setPage(page + 1);
-  }; 
+  };
 
   const prevPage = () => {
     if (page > 1) setPage(page - 1);
