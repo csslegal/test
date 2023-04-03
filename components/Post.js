@@ -37,7 +37,7 @@ export default function Post({ data, table }) {
               width={960}
               height={500}
               priority={true}
-              loading="lazy"
+              //loading="lazy"
               style={{ 
                 maxWidth: "100%",
                 height: "auto",

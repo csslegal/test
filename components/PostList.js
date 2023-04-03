@@ -16,7 +16,7 @@ export default function PostList({ data, url }) {
                 width={540}
                 height={300}
                 priority={true}
-                loading="lazy"
+                //loading="lazy"
                 style={{
                   maxWidth: "100%",
                   height: "auto",
